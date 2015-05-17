@@ -28,6 +28,7 @@ func TestQueryWithSpace(t *testing.T) {
 
 func AssertContains(actual string, expected string, t *testing.T) {
 	if !strings.Contains(actual, expected) {
+		log.Fatal(actual + " did not contain " + expected)
 		t.Fail()
 	}
 }
